@@ -18,7 +18,7 @@ _robots.txt_
 虽然看得不是很懂，但是它提到了fl0g.php文件，那就再打开看看
 ![alt text](image-2.png)
 
-得到flag：cyberpeace{3fb73d99a1b5fc4deed251e1311e5f3c}
+得到flag：`cyberpeace  {3fb73d99a1b5fc4deed251e1311e5f3c}`
 
 #
 #

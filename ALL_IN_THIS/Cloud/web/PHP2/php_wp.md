@@ -18,5 +18,5 @@ _tips:其实可以先尝试打开index.php文件，如果没有报错，就说�
 输入`http://61.147.171.105:49743/index.php?id=%2561dmin`
 ![alt text](image-2.png)
 得到flag
-cyberpeace{768bd809029bf4d6aa41d1597828db91}
+`cyberpeace{768bd809029bf4d6aa41d1597828db91}`
 （所以说web手速速去学习php

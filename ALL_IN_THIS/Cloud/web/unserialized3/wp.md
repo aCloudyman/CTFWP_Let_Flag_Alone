@@ -32,7 +32,7 @@ ____unserialize() (PHP 7.4+): 替代__wakeup()_
 
 令`?code=0:4:"xctf":2:{s:4:"flag";s;3:"111";}`绕过wakeup（）检验
 得到flag： 
-cyberpeace{fe025ae95b82a3ad1d4d092b5c055270}
+`cyberpeace{fe025ae95b82a3ad1d4d092b5c055270}`
 #
  其实可以自己写一个php文件，使用serialize（）来得到序列化后的结果，结果应该是  
  `0:4:"xctf":1:{s:4:"flag";s;3:"111";}`  
