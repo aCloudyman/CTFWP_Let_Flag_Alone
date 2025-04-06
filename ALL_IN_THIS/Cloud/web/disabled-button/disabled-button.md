@@ -1,0 +1,3 @@
+# button
+按钮实质就是给http发送一个post请求，先打开源代码看看按钮发送的名称和值，再直接打开hackbar用post请求发送auth=flag就能或得flag
+flag：cyberpeace{1857e9a1cf8de278f5d2be15afa6b51b}
