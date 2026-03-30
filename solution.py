@@ -18,14 +18,15 @@ def run(image, alpha):
         padded.append([pad_value] + row + [pad_value])
     padded.append([pad_value] * (width + 2))
 
-    kernel_area = 9
+    kernel_size = 3
+    kernel_area = kernel_size * kernel_size
     output = []
     for i in range(height):
         out_row = []
         for j in range(width):
             pixel_sum = 0
-            for row_offset in range(3):
-                for col_offset in range(3):
+            for row_offset in range(kernel_size):
+                for col_offset in range(kernel_size):
                     pixel_sum += padded[i + row_offset][j + col_offset]
             out_row.append(pixel_sum // kernel_area)
         output.append(out_row)
