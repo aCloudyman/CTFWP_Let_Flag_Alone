@@ -6,11 +6,7 @@ def run(image, alpha):
     for row in image:
         new_row = []
         for value in row:
-            new_value = alpha * value
-            if new_value < 1:
-                new_value = 1
-            elif new_value > 255:
-                new_value = 255
+            new_value = max(1, min(255, alpha * value))
             new_row.append(int(new_value))
         stretched.append(new_row)
 
@@ -22,6 +18,7 @@ def run(image, alpha):
         padded.append([pad_value] + row + [pad_value])
     padded.append([pad_value] * (width + 2))
 
+    kernel_area = 9
     output = []
     for i in range(height):
         out_row = []
@@ -30,7 +27,7 @@ def run(image, alpha):
             for row_offset in range(3):
                 for col_offset in range(3):
                     pixel_sum += padded[i + row_offset][j + col_offset]
-            out_row.append(int(pixel_sum / 9))
+            out_row.append(pixel_sum // kernel_area)
         output.append(out_row)
 
     return output
